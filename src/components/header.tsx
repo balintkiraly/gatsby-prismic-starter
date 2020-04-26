@@ -1,22 +1,12 @@
 import { Link } from "gatsby"
+import { Box, Text, Flex } from "@chakra-ui/core"
 import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <Flex as="header" mb={2} bg="purple.700" justifyContent="center">
+    <Box w="960px" px={3} py={5}>
+      <Text as="h1" fontSize="xlg">
         <Link
           to="/"
           style={{
@@ -26,9 +16,9 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
-    </div>
-  </header>
+      </Text>
+    </Box>
+  </Flex>
 )
 
 Header.propTypes = {
