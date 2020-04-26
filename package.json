@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-prismic-starter",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A starter with Gatsby, TypeScript, Prismic and ChakraUI",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Balint Kiraly <balint.kiraly@protonmail.com>",
   "dependencies": {
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
@@ -22,7 +22,7 @@
     "prettier": "2.0.4"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "chakra", "prismic", "typescipt"
   ],
   "license": "MIT",
   "scripts": {
@@ -36,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/balintkiraly/gatsby-prismic-starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/balintkiraly/gatsby-prismic-starter/issues"
   }
 }
