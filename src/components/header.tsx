@@ -1,9 +1,12 @@
 import { Link } from "gatsby"
 import { Box, Text, Flex } from "@chakra-ui/core"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+type HeaderProps = {
+  siteTitle: string
+}
+
+export const Header = ({ siteTitle }: HeaderProps) => (
   <Flex as="header" mb={2} bg="purple.700" justifyContent="center">
     <Box w="960px" px={3} py={5}>
       <Text as="h1" fontSize="xlg">
@@ -20,13 +23,3 @@ const Header = ({ siteTitle }) => (
     </Box>
   </Flex>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

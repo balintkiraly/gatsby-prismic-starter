@@ -5,15 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { Box, CSSReset, ThemeProvider } from "@chakra-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 import { theme } from "../plugins/chakra-ui/theme"
+import { Header } from "./header"
 
-import Header from "./header"
+type LayoutProps = {
+  children: React.ReactNode
+}
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -39,9 +41,3 @@ const Layout = ({ children }) => {
     </ThemeProvider>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
