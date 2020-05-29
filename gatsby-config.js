@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: ".env",
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -11,6 +15,17 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `${process.env.PRISMIC_REPOSITORY_NAME}`,
+        accessToken: `${process.env.PRIMSIC_ACCESS_TOKEN}`,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+        schemas: {
+          blogpost: require("./src/schemas/blogpost.json"),
+        },
       },
     },
     `gatsby-transformer-sharp`,
